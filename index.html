@@ -353,8 +353,12 @@
     timerInterval = setInterval(tick, 1000);
   }
 
-  function renderAll() { renderStats(); renderTop(); renderRef(); renderTimer(); }
+   function renderAll() { renderStats(); renderTop(); renderRef(); renderTimer(); }
   fetchData();
+  
+  // Auto-refresh har 10 sekundda
+  setInterval(fetchData, 10000);
+</script>
 </script>
 </body>
 </html>
