@@ -140,6 +140,8 @@ async def handle_index(request):
         return web.Response(text=html_content, content_type='text/html')
     except FileNotFoundError:
         return web.Response(text='index.html not found', status=404)
+
+async def handle_health(request):
     """GET /health - Health check endpoint"""
     try:
         conn_pool = await get_pool()
